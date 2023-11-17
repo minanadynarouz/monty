@@ -79,3 +79,24 @@ void pint(stack_t **dll, unsigned int line_num)
         }
 	printf("%d\n", (*dll)->n);
 }
+
+/**
+ * pop - remove value at top of the stack
+ * @dll: doubly linked list
+ * @line_num: line numbers
+ */
+
+void pop(stack_t **dll, unsigned int line_num)
+{
+	stack_t *tmp;
+
+	if (dll == NULL || *dll == NULL)
+	{
+                fprintf(stderr, "L%u: can't pop an empty stack\n", line_num);
+                exit(EXIT_FAILURE);
+	}
+
+	tmp = *dll;
+	*dll = (*dll)->next;
+	free(tmp);
+}
