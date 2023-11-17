@@ -15,9 +15,10 @@ void push(stack_t **dll, unsigned int line_num)
 		fprintf(stderr, "L%u: usage: push integer\n", line_num);
 		exit(EXIT_FAILURE);
 	}
+
 	for (i = 0; globVars.arg[i]; i++)
 	{
-		if (!(globVars.arg[i]))
+		if (!isdigit(globVars.arg[i]) && globVars.arg[i] != '-')
 		{
 			fprintf(stderr, "L%u: usage: push integer\n", line_num);
 			exit(EXIT_FAILURE);
