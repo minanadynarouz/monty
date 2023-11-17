@@ -99,7 +99,7 @@ void sub(stack_t **dll, unsigned int line_num)
  * @line_num: line number
  */
 
-void divde(stack_t **dll, unsigned int line_num)
+void divide(stack_t **dll, unsigned int line_num)
 {
         int i;
         stack_t *tmp;
