@@ -94,12 +94,12 @@ void sub(stack_t **dll, unsigned int line_num)
 }
 
 /**
- * div - divide top 2 element
+ * divide - divide top 2 element
  * @dll: doubly linked list
  * @line_num: line number
  */
 
-void div(stack_t **dll, unsigned int line_num)
+void divde(stack_t **dll, unsigned int line_num)
 {
         int i;
         stack_t *tmp;
@@ -131,12 +131,12 @@ void div(stack_t **dll, unsigned int line_num)
 }
 
 /**
- * mul - mul top 2 element together
+ * mult - mult top 2 element together
  * @dll: doubly linked list
  * @line_num: line number
  */
 
-void mul(stack_t **dll, unsigned int line_num)
+void mult(stack_t **dll, unsigned int line_num)
 {
         int i;
         stack_t *tmp;
