@@ -17,6 +17,7 @@ void (*get_opcode(char *opc))(stack_t **stack, unsigned int line_number)
 		{"pop", pop},
 		{"nop", nop},
 		{"add", add},
+		{"swap", swap},
 		{NULL, NULL}};
 
 	for (i = 0; instruction[i].opcode; i++)
