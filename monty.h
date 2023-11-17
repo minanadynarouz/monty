@@ -77,5 +77,6 @@ void pall(stack_t **dll, unsigned int line_num);
 void nop(stack_t **dll, unsigned int line_num);
 void pint(stack_t **dll, unsigned int line_num);
 void pop(stack_t **dll, unsigned int line_num);
+void add(stack_t **dll, unsigned int line_num);
 
 #endif

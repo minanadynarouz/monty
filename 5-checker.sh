@@ -6,7 +6,10 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 # monty bytcode test case:
-montyBytes="pall"
+montyBytes="push 1
+push 2
+add 2
+pall"
 
 # make test case file:
 echo "$montyBytes" > testCase00
@@ -15,7 +18,7 @@ echo "$montyBytes" > testCase00
 program_output=$(./monty testCase00)
 
 # Specify the expected result
-expected_result=""
+expected_result="3"
 
 # Compare the program's output with the expected result
 if [ "$program_output" == "$expected_result" ]; then

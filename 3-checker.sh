@@ -7,18 +7,17 @@ NC='\033[0m' # No Color
 
 # monty bytcode test case:
 montyBytes="push 1
-pall
-push a"
+add
+pall"
 
 # make test case file:
 echo "$montyBytes" > testCase00
 
 # Run the program and capture its output
-program_output=$(./monty testCase00 2>&1)
+program_output=$(./monty testCase00 2>&1 >/dev/null)
 
 # Specify the expected result
-expected_result="1
-L3: usage: push integer"
+expected_result="L2: can't add, stack too short"
 
 # Compare the program's output with the expected result
 if [ "$program_output" == "$expected_result" ]; then

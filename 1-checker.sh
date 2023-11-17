@@ -9,6 +9,7 @@ NC='\033[0m' # No Color
 montyBytes="push 1
 push 2
 push 3
+add
 pall"
 
 # make test case file:
@@ -18,8 +19,7 @@ echo "$montyBytes" > testCase00
 program_output=$(./monty testCase00)
 
 # Specify the expected result
-expected_result="3
-2
+expected_result="5
 1"
 
 # Compare the program's output with the expected result
