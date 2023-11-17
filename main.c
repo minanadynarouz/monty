@@ -16,7 +16,7 @@ void free_globals(void)
  * define_globals - initialize the global variables
  */
 
-void define_globals()
+void define_globals(void)
 {
 	globVars.format = 1;
 	globVars.buffer = NULL;
@@ -50,7 +50,8 @@ int main(int argc, char *argv[])
 			implement_opc = get_opcode(lines[0]);
 			if (!implement_opc)
 			{
-				fprintf(stderr, "L%u: unknown instruction %s\n", globVars.line_number, lines[0]);
+				fprintf(stderr, "L%u: unknown instruction %s\n",
+						globVars.line_number, lines[0]);
 				free_globals();
 				fclose(fp);
 				exit(EXIT_FAILURE);

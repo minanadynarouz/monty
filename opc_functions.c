@@ -2,7 +2,7 @@
 
 /**
  * push - pushe element to the stack
- * @dll: doubly linked list 
+ * @dll: doubly linked list
  * @line_num: line number
  */
 
