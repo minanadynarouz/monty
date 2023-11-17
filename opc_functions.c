@@ -72,11 +72,11 @@ void nop(stack_t **dll, unsigned int line_num)
 
 void pint(stack_t **dll, unsigned int line_num)
 {
-        if (*dll == NULL)
-        {
+	if (*dll == NULL)
+	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", line_num);
-                exit(EXIT_FAILURE);
-        }
+		exit(EXIT_FAILURE);
+	}
 	printf("%d\n", (*dll)->n);
 }
 
@@ -92,8 +92,8 @@ void pop(stack_t **dll, unsigned int line_num)
 
 	if (dll == NULL || *dll == NULL)
 	{
-                fprintf(stderr, "L%u: can't pop an empty stack\n", line_num);
-                exit(EXIT_FAILURE);
+		fprintf(stderr, "L%u: can't pop an empty stack\n", line_num);
+		exit(EXIT_FAILURE);
 	}
 
 	tmp = *dll;
