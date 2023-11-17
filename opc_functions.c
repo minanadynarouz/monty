@@ -17,7 +17,7 @@ void push(stack_t **dll, unsigned int line_num)
 	}
 	for (i = 0; globVars.arg[i]; i++)
 	{
-		if (!(globVars.arg[i] != '-' && globVars.arg[i]))
+		if (!(globVars.arg[i]))
 		{
 			fprintf(stderr, "L%u: usage: push integer\n", line_num);
 			exit(EXIT_FAILURE);
