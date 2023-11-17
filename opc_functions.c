@@ -49,3 +49,15 @@ void pall(stack_t **dll, unsigned int line_num)
 		tmp = tmp->next;
 	}
 }
+
+/**
+ * nop - do nothing
+ * @dll: doubly linked list
+ * @line_num: line numbers
+ */
+
+void nop(stack_t **dll, unsigned int line_num)
+{
+	(void)dll;
+	(void)line_num;
+}
