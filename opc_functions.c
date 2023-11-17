@@ -26,6 +26,7 @@ void push(stack_t **dll, unsigned int line_num)
 	}
 
 	num = atoi(globVars.arg);
+
 	if (globVars.format == 1)
 		add_dll_begining(dll, num);
 	else
@@ -61,4 +62,20 @@ void nop(stack_t **dll, unsigned int line_num)
 {
 	(void)dll;
 	(void)line_num;
+}
+
+/**
+ * pint - print value at top of the stack
+ * @dll: doubly linked list
+ * @line_num: line numbers
+ */
+
+void pint(stack_t **dll, unsigned int line_num)
+{
+        if (*dll == NULL)
+        {
+		fprintf(stderr, "L%u: can't pint, stack empty\n", line_num);
+                exit(EXIT_FAILURE);
+        }
+	printf("%d\n", (*dll)->n);
 }

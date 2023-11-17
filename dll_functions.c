@@ -78,6 +78,7 @@ stack_t *add_dll_end(stack_t **head, const int n)
 void free_dll(stack_t *head)
 {
 	stack_t *tmp;
+
 	while (head != NULL)
 	{
 		tmp = head;

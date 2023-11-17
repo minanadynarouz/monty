@@ -74,5 +74,7 @@ void define_globals(void);
 /*-----OPCODE FUNCTIONS-----*/
 void push(stack_t **dll, unsigned int line_num);
 void pall(stack_t **dll, unsigned int line_num);
+void nop(stack_t **dll, unsigned int line_num);
+void pint(stack_t **dll, unsigned int line_num);
 
 #endif
