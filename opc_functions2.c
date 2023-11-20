@@ -35,3 +35,24 @@ void modu(stack_t **dll, unsigned int line_num)
 	tmp->n = tmp->n % (*dll)->n;
 	pop(dll, line_num);
 }
+
+void queue(stack_t **dll, unsigned int line_num)
+{
+    (void)dll;
+    (void)line_num;
+
+    globVars.format = 0;
+}
+
+/**
+ * stack - set the format fo the data to stack
+ * @dll: head of the linked list
+ * @line_num: line number;
+ */
+void _stack(stack_t **dll, unsigned int line_num)
+{
+    (void)dll;
+    (void)line_num;
+
+    globVars.format = 1;
+}
