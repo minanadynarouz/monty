@@ -22,6 +22,7 @@ void (*get_opcode(char *opc))(stack_t **stack, unsigned int line_number)
 		{"div", divide},
 		{"mul", mult},
 		{"mod", modu},
+		{"pchar", pchar},
 		{NULL, NULL}};
 
 	for (i = 0; instruction[i].opcode; i++)
