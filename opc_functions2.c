@@ -56,3 +56,28 @@ void _stack(stack_t **dll, unsigned int line_num)
 
     globVars.format = 1;
 }
+
+/**
+ * pchar - print char at top of the stack
+ * @dll: doubly linked list
+ * @line_num: line numbers
+ */
+
+void pchar(stack_t **dll, unsigned int line_num)
+{
+	int value;
+
+	if (*dll == NULL)
+	{
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	value = (*dll)->n;
+	if (value < 0 || value > 127)
+	{
+		fprintf(stderr, "L%d: can't pchar, value out of range", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	printf("%c\n", value);
+}
