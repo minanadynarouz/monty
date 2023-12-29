@@ -92,7 +92,7 @@ void pstr(stack_t **dll, unsigned int __attribute__((__unused__)) line_num)
 {
 	stack_t *runner = *dll;
 
-	while (runner->n > 0 && runner->n <= 127)
+	while (runner && runner->n > 0 && runner->n <= 127)
 	{
 		printf("%c", runner->n);
 		runner = runner->next;
