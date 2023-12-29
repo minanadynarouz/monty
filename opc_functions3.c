@@ -48,8 +48,8 @@ void rotr(stack_t **dll, unsigned int __attribute__((__unused__)) line_num)
 	}
 
 	aux->prev->next = NULL;
-	aux->prev = NULL;
 	aux->next = *dll;
+	aux->prev = NULL;
 	(*dll)->prev = aux;
 	*dll = aux;
 }
