@@ -92,16 +92,10 @@ void pstr(stack_t **dll, unsigned int line_num)
 {
 	int value;
 
-	if (*dll == NULL)
-	{
-		fprintf(stderr, "L%d: can't pstr, stack empty\n", line_num);
-		exit(EXIT_FAILURE);
-	}
-	
 	while (*dll != NULL)
 	{
 		value = (*dll)->n;
-		if (value >= 0 || value <= 127)
+		if ((value >= 65 && value <= 90) || (value >= 97 && value <= 122))
 		{
 			printf("%c", value);
 		}
