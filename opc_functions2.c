@@ -88,7 +88,7 @@ void pchar(stack_t **dll, unsigned int line_num)
  * @dll: doubly linked list
  * @line_num: line number;
  */
-void pstr(stack_t **dll, unsigned int line_num)
+void pstr(stack_t **dll, unsigned int __attribute__((__unused__)) line_num)
 {
 	int value;
 

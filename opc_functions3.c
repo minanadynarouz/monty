@@ -5,7 +5,7 @@
  * @line_num: line number
  */
 
-void rot1(stack_t **dll, unsigned int line_num)
+void rot1(stack_t **dll, unsigned int __attribute__((__unused__)) line_num)
 {
 	stack_t *temp;
 
