@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * rot1 - rotate the stack to the top
+ * rotl - rotate the stack to the top
  * @dll: doubly linked list
  * @line_num: line number
  */
 
-void rot1(stack_t **dll, unsigned int __attribute__((__unused__)) line_num)
+void rotl(stack_t **dll, unsigned int __attribute__((__unused__)) line_num)
 {
 	stack_t *temp;
 
