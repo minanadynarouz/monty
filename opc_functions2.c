@@ -69,13 +69,13 @@ void pchar(stack_t **dll, unsigned int line_num)
 
 	if (*dll == NULL)
 	{
-		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_num);
 		exit(EXIT_FAILURE);
 	}
 	value = (*dll)->n;
 	if (value < 0 || value > 127)
 	{
-		fprintf(stderr, "L%d: can't pchar, value out of range", line_number);
+		fprintf(stderr, "L%d: can't pchar, value out of range", line_num);
 		exit(EXIT_FAILURE);
 	}
 
