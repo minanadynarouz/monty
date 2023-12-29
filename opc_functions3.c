@@ -35,18 +35,21 @@ void rotl(stack_t **dll, unsigned int __attribute__((__unused__)) line_num)
 
 void rotr(stack_t **dll, unsigned int __attribute__((__unused__)) line_num)
 {
-	stack_t *head, *last;
+	stack_t *aux;
 
 	if (*dll == NULL || (*dll)->next == NULL)
 		return;
 	
-	last = *dll;
+	aux = *dll;
 
-	while ((*dll)->next != NULL)
+	while (aux->next != NULL)
 	{
-		*dll = (*dll)->next;
+		aux = aux->next;
 	}
-	head = *dll;
-	head->prev = NULL;
-	last->next = NULL;
+
+	aux->prev->next = NULL;
+	aux->prev = NULL;
+	aux->next = *dll;
+	(*dll)->prev = aux;
+	*dll = aux;
 }
