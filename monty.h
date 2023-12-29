@@ -84,5 +84,6 @@ void divide(stack_t **dll, unsigned int line_num);
 void mult(stack_t **dll, unsigned int line_num);
 void modu(stack_t **dll, unsigned int line_num);
 void pchar(stack_t **dll, unsigned int line_num);
+void pstr(stack_t **dll, unsigned int line_num);
 
 #endif

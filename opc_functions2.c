@@ -81,3 +81,31 @@ void pchar(stack_t **dll, unsigned int line_num)
 
 	printf("%c\n", value);
 }
+
+
+/**
+ * pstr - print string at top of the stack
+ * @dll: doubly linked list
+ * @line_num: line number;
+ */
+void pstr(stack_t **dll, unsigned int line_num)
+{
+	int value;
+
+	if (*dll == NULL)
+	{
+		fprintf(stderr, "L%d: can't pstr, stack empty\n", line_num);
+		exit(EXIT_FAILURE);
+	}
+	
+	while (*dll != NULL)
+	{
+		value = (*dll)->n;
+		if (value >= 0 || value <= 127)
+		{
+			printf("%c", value);
+		}
+		*dll = (*dll)->next;
+	}
+	printf("\n");
+}
