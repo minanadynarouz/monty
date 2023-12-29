@@ -90,16 +90,12 @@ void pchar(stack_t **dll, unsigned int line_num)
  */
 void pstr(stack_t **dll, unsigned int __attribute__((__unused__)) line_num)
 {
-	int value;
+	stack_t *runner = *dll;
 
-	while (*dll != NULL)
+	while (runner->n > 0 && runner->n <= 127)
 	{
-		value = (*dll)->n;
-		if ((value >= 65 && value <= 90) || (value >= 97 && value <= 122))
-		{
-			printf("%c", value);
-		}
-		*dll = (*dll)->next;
+		printf("%c", runner->n);
+		runner = runner->next;
 	}
 	printf("\n");
 }
