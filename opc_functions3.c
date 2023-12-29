@@ -9,6 +9,9 @@ void rotl(stack_t **dll, unsigned int __attribute__((__unused__)) line_num)
 {
 	stack_t *temp;
 
+	if (*dll == NULL || (*dll)->next == NULL)
+		return;
+
 	temp = *dll;
 	*dll = (*dll)->next;
 	(*dll)->prev = NULL;
