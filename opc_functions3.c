@@ -17,10 +17,11 @@ void rotl(stack_t **dll, unsigned int __attribute__((__unused__)) line_num)
 	*dll = (*dll)->next;
 	(*dll)->prev = NULL;
 
-	while(temp != NULL)
+	while(temp->next != NULL)
 	{
 		temp = temp->next;
 	}
+
 	temp->next = tempLast;
 	tempLast->next = NULL;
 	tempLast->prev = temp;
