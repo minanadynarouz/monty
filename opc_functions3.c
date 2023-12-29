@@ -7,20 +7,21 @@
 
 void rotl(stack_t **dll, unsigned int __attribute__((__unused__)) line_num)
 {
-	stack_t *temp;
+	stack_t *temp, *tempLast;
 
 	if (*dll == NULL || (*dll)->next == NULL)
 		return;
 
 	temp = *dll;
+	tempLast = *dll;
 	*dll = (*dll)->next;
 	(*dll)->prev = NULL;
 
-	while(temp->next != NULL)
+	while(temp != NULL)
 	{
 		temp = temp->next;
 	}
-	temp->next = *dll;
-	temp->next->next = NULL;
-	temp->next->prev = temp;
+	temp->next = tempLast;
+	tempLast->next = NULL;
+	tempLast->prev = temp;
 }
